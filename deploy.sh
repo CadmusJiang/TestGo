@@ -1,18 +1,3 @@
-# FBI WARNING 
-# manual operation 
-#generate ssh-key
-#ssh-keygen -t rsa -P ""
-# set ssh
-#ssh-copy-id -i ~/.ssh/id_rsa.pub root@$pd1
-#ssh-copy-id -i ~/.ssh/id_rsa.pub root@$pd2
-#ssh-copy-id -i ~/.ssh/id_rsa.pub root@$pd3
-#ssh-copy-id -i ~/.ssh/id_rsa.pub root@$tikv1
-#ssh-copy-id -i ~/.ssh/id_rsa.pub root@$tikv2
-#ssh-copy-id -i ~/.ssh/id_rsa.pub root@$tikv3
-#ssh-copy-id -i ~/.ssh/id_rsa.pub root@$tidb1
-#ssh-copy-id -i ~/.ssh/id_rsa.pub root@$tidb2
-#ssh-copy-id -i ~/.ssh/id_rsa.pub root@$tidb3
-
 [[ -s "$GVM_ROOT/scripts/gvm" ]] && source "$GVM_ROOT/scripts/gvm"
 gvm use go1.16
 
@@ -25,7 +10,7 @@ tikv3="172.16.4.212"
 tidb1="172.16.5.165"
 tidb2="172.16.4.179"
 tidb3="172.16.4.181"
-home="/root/.gvm/pkgsets/go1.16/global/src/github.com/pingcap"
+home="/tmp/src/github.com/pingcap"
 haproxyPort="4000"
 # compile pd、tidb
 cd $home/tidb

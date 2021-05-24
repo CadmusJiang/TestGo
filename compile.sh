@@ -1,11 +1,8 @@
-bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
-
 [[ -s "$GVM_ROOT/scripts/gvm" ]] && source "$GVM_ROOT/scripts/gvm"
 gvm install go1.16
 gvm use go1.16
 
-home="/Users/cadmusjiang/pingcap"
-
+home="/tmp/src/github.com/pingcap"
 
 cd $home/br
 make build
